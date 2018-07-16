@@ -1,0 +1,19 @@
+.searcher-container {
+  width: 100%;
+  display: flex; }
+  .searcher-container .searcher {
+    width: 90%;
+    height: 25px;
+    padding: 5px;
+    border: none;
+    font-size: 1.25em; }
+    .searcher-container .searcher:focus {
+      outline: none; }
+  .searcher-container .search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    background: #1498d7;
+    font-size: 1.25em;
+    cursor: pointer; }

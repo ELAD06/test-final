@@ -1,0 +1,26 @@
+@import 'styles/variables';
+
+.searcher-container {
+  width: 100%;
+  display: flex;
+  .searcher {
+    width: 90%;
+    height: 25px;
+    padding: 5px;
+    border: none;
+    font-size: 1.25em;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    background: $primary;
+    font-size: 1.25em;
+    cursor: pointer;
+  }
+}
