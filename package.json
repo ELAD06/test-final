@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "PORT=3001 node ./bin/www",
-    "dev": "PORT=3001 nodemon ./bin/www"
+    "start": "cross-env PORT=3001 node ./bin/www",
+    "dev": "cross-env PORT=3001 nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "axios": "^0.18.0",
+    "cross-env": "^5.2.0",
     "nodemon": "^1.18.3"
   }
 }
