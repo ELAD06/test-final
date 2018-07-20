@@ -61,7 +61,6 @@ router.get('/:id', async (req, res, next) => {
     const axiosResp = await MLClient.get(`/items/${id}`);
     res.send(axiosResp.data);
     } catch (error) {
-      console.log('QUE NO, ANDA PARA ALLA', error)
       next(error);
     }
 });
