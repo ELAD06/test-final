@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { BASE_URL } from './constants';
+const axios = require('axios')
+const { BASE_URL } = require('./constants');
 
 const create = () => {
   return axios.create({
@@ -9,4 +9,4 @@ const create = () => {
 
 const clientApi = create();
 
-export default clientApi;
+module.exports = clientApi;
