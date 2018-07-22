@@ -17,9 +17,9 @@ class App extends Component {
 
   async fetchSearch(request) {
     const resp = await fetch(`${API_BASE_URL}/items?q=${request}`);
-    debugger;
-    if(resp.status !== 200 && resp.results.length < 1) return alert('Error con la API de Network');
-    this.setState({ results: resp.results });
+    const data = await resp.json();
+    if(resp.status !== 200 && data.results.length < 1) return alert('Error con la API de Network');
+    this.setState({ results: data.results });
   }
 
   render() {
