@@ -2,7 +2,8 @@ const createError = require('http-errors');
 const express = require('express');
 const router = express.Router();
 const MLClient = require('./utils/client');
-
+const parser = require('./utils/parser');
+const LIMIT_SEARCH = 4;
 /**
  *
  * /vendeli/items/:
@@ -27,8 +28,9 @@ router.get('/', async (req, res, next) => {
     const errorMessage = 'El parametro "q"/"query" es invalido o no esta definido, por favor intenta de nuevo';
     throw createError(400, errorMessage);
   }
-  const axiosResp = await MLClient.get(`/sites/MLA/search?q=${q}`);
-  res.send(axiosResp.data);
+  const axiosResp = await MLClient.get(`/sites/MLA/search?q=${q}&limit=${LIMIT_SEARCH}`);
+  const items = parser.parseItems(axiosResp.data);
+  res.send(items);
   } catch (error) {
     next(error);
   }
@@ -58,8 +60,10 @@ router.get('/:id', async (req, res, next) => {
       const errorMessage = 'El parametro "ID" es invalido o no esta definido, por favor intenta de nuevo';
       throw createError(400, errorMessage);
     }
-    const axiosResp = await MLClient.get(`/items/${id}`);
-    res.send(axiosResp.data);
+    const itemResp = await MLClient.get(`/items/${id}`);
+    const descResp = await MLClient.get(`/items/${id}/description`);
+    const item = parser.parseResult(itemResp.data, descResp.data);
+    res.send(item);
     } catch (error) {
       next(error);
     }
