@@ -31,7 +31,7 @@ export default class Home extends Component {
     const resp = await fetch(`${API_BASE_URL}/items?q=${request}`);
     const data = await resp.json();
     this.setState({ isLoading: false });
-    if(resp.status !== 200 && data.items.length < 1) return alert('Error con la API de Network');
+    if(resp.status !== 200 && data.items.length < 1) return alert('Error con la API de MercadoLibre');
     this.setState({ results: data.items });
   }
 
