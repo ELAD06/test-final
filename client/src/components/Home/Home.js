@@ -29,9 +29,10 @@ export default class Home extends Component {
   async fetchSearch(request) {
     this.setState({ isLoading: true });
     const resp = await fetch(`${API_BASE_URL}/items?q=${request}`);
-    const data = await resp.json();
     this.setState({ isLoading: false });
-    if(resp.status !== 200 && data.items.length < 1) return alert('Error con la API de MercadoLibre');
+    if(resp.status !== 200) return this.props.history.push('/404');
+    const data = await resp.json();
+    if(!data.items.length) return this.props.history.push('/404');
     this.setState({ results: data.items });
   }
 

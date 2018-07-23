@@ -5,14 +5,16 @@ import './ItemDetails.css';
 export default class ItemDetails extends Component {
   state = {
     isLoading: {},
-    data: {}
+    data: {},
+    hasError: false,
+    error: {}
   }
 
   async componentDidMount() {
     this.setState({ isLoading: true });
     const resp = await fetch(`${API_BASE_URL}/items/${this.props.match.params.id}`);
+    if(resp.status !== 200) return this.props.history.push('/404');
     const data = await resp.json();
-    if(resp.status !== 200) return alert('Error con la API de MercadoLibre');
     this.setState({ data });
     this.setState({ isLoading: false });
   }
