@@ -5,7 +5,7 @@
 
 # production
 client/build/
-cliebt/src/**/*.css
+client/src/**/*.css
 
 # misc
 .DS_Store
