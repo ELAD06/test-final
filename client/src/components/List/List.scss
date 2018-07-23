@@ -1,7 +1,14 @@
 @import 'styles/variables';
 
+
 .list-container {
-  background: $primaryOp;
-  color: black;
-  margin-top: 0%;
+  background: $gradientBackground, url($cristalsBgImage);
+  background-size: cover;
+  color: white;
+  list-style: none;
+  height: 100vh;
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
