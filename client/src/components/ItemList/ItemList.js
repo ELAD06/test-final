@@ -21,7 +21,7 @@ export default class ItemList extends Component {
             <Link to={`/items/${id}`} className='item-container' target="_blank">
                 <div className="item-left">
                     <h3 className="item-title"> { title } </h3>
-                    <img className="item-picture" src={picture} alt="item-picture"/>
+                    <img className="item-picture" src={picture} alt="item-imagen"/>
                 </div>
                 <div className="item-right">
                     <p className="item-condition">

@@ -1,0 +1,116 @@
+@import 'styles/variables';
+
+.item-details-container {
+  div {
+    display: flex;
+  }
+  background: $detailsBg;
+  display: flex;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 80px;
+  flex-direction: column;
+
+  .item-details-package {
+    background: white;
+    display: flex;
+    width: 60vw;
+    flex-direction: column;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+
+    .item-details-header {
+      height: 170px;
+      background: $gradientBackground, url($cristalsBgImage);
+      background-size: cover;
+      border-top-left-radius: 22px;
+      border-top-right-radius: 22px;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.8em;
+      display: flex;
+    }
+
+    .item-details-body {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 25px;
+
+      .item-details-price {
+        color: $secondaryOp;
+      }
+
+      .item-details-author {
+        span {
+          font-size: 1.5em;
+          font-weight: bold;
+          font-style: italic;
+        }
+      }
+    }
+
+    .item-details-left-container,
+    .item-details-right-container,
+    .item-details-description,
+    .item-details-author {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      display: flex;
+    }
+
+    .item-details-picture {
+      width: 240px;
+    }
+
+    .item-details-description,
+    .item-details-author {
+      margin-top: 20px;
+      p {
+        margin: 0;
+      }
+    }
+
+    .item-details-description {
+      padding: 20px 20px 35px 20px;
+    }
+
+    .item-details-buy {
+      background: $gradientBackground, url($cristalsBgImage);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 1.25em;
+      cursor: pointer;
+    }
+  }
+}
+
+.loading {
+  height: 100vh;
+}
+
+@media (max-width: $ms) {
+  .item-details-container {
+    padding: 0;
+    .item-details-package {
+      width: 100vw;
+      .item-details-header {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+      .item-details-body {
+        flex-direction: column;
+      }
+      .item-details-picture {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  }
+}
