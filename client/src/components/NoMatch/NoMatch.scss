@@ -1,0 +1,15 @@
+@import 'styles/variables';
+
+.no-match-container {
+  display: flex;
+  background: $gradientBackground, url($cristalsBgImage);
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  height: 100vh;
+  flex-direction: column;
+
+  a {
+    text-decoration: none;
+  }
+}
