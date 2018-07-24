@@ -12,9 +12,6 @@
   height: auto;
   flex-direction: column;
 
-  .header-wrapper {
-    width: 100%;
-  }
 
   .item-details-package {
     margin-top: 20px;
@@ -106,6 +103,7 @@
     padding: 0;
     .item-details-package {
       width: 100vw;
+      margin-top: 0;
       .item-details-header {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
