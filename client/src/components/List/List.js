@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ItemList from '../ItemList';
 import './List.css';
 
 export default class List extends  Component {
@@ -16,7 +17,7 @@ export default class List extends  Component {
           (
             this.props.results.map (
               (item, index) => 
-                <li className='item-container' key={index}><code> {item.title} </code></li>
+                <ItemList key={index} title={item.title} />
             )
           )
         }
