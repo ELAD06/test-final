@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SpinnerWrapper from '../SpinnerWrapper'
 import { API_BASE_URL } from '../../utils/constants/api';
 import './ItemDetails.css';
 
@@ -24,7 +25,7 @@ export default class ItemDetails extends Component {
       <div className="ItemDetails-container">
         { this.state.isLoading
         ? (
-          <div>Cargando...</div>
+          <SpinnerWrapper color="red" />
         ): (
           <div>
             {this.state.data.item.title}

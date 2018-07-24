@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SpinnerWrapper from '../SpinnerWrapper';
 import ItemList from '../ItemList';
 import './List.css';
 
@@ -11,10 +12,7 @@ export default class List extends  Component {
         
         { isLoading ? 
           (
-            <div className="loading-wrapper">
-            {/* TODO: // CREAR COMPONENTE DE CARGANDO... {SNIPPER} */}
-              Cargando ...
-            </div>
+            <SpinnerWrapper />
           ) :
           (
             this.props.results.map (
