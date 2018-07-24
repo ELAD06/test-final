@@ -5,11 +5,13 @@
   justify-content: center;
   align-items: center;
   height: auto;
-  padding: 80px;
   flex-direction: column; }
   .item-details-container div {
     display: flex; }
+  .item-details-container .header-wrapper {
+    width: 100%; }
   .item-details-container .item-details-package {
+    margin-top: 20px;
     background: white;
     display: flex;
     width: 60vw;
@@ -27,7 +29,8 @@
       color: white;
       font-weight: bold;
       font-size: 1.8em;
-      display: flex; }
+      display: flex;
+      padding: 5px; }
     .item-details-container .item-details-package .item-details-body {
       flex-direction: row;
       justify-content: space-around;
@@ -63,7 +66,8 @@
       border-radius: 5px;
       padding: 10px;
       font-size: 1.25em;
-      cursor: pointer; }
+      cursor: pointer;
+      text-decoration: none; }
 
 .loading {
   height: 100vh; }
