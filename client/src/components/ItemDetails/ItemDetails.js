@@ -28,7 +28,8 @@ export default class ItemDetails extends Component {
       description,
       free_shipping,
       picture,
-      sold_quantity
+      sold_quantity,
+      permalink
     } = this.state.data;
 
     condition = condition === 'used' ? 'usado' : <b>nuevo</b>;
@@ -70,7 +71,7 @@ export default class ItemDetails extends Component {
                 <div className="item-details-sold-quantity">
                   <p>Cantidad de ventas: {sold_quantity}</p>
                 </div>
-                <button className="item-details-buy">Comprar</button>
+                <a className="item-details-buy" href={permalink} target="_blank">Comprar</a>
                 <div className="item-details-author">
                   Autor:
                   <p className="author-name">

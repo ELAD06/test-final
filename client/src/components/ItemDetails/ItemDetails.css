@@ -66,6 +66,8 @@
       font-size: 1.25em;
       cursor: pointer;
       text-decoration: none; }
+      .item-details-container .item-details-package .item-details-buy:focus {
+        outline: none; }
 
 .loading {
   height: 100vh; }
