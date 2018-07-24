@@ -10,10 +10,14 @@
   justify-content: center;
   align-items: center;
   height: auto;
-  padding: 80px;
   flex-direction: column;
 
+  .header-wrapper {
+    width: 100%;
+  }
+
   .item-details-package {
+    margin-top: 20px;
     background: white;
     display: flex;
     width: 60vw;
@@ -33,6 +37,7 @@
       font-weight: bold;
       font-size: 1.8em;
       display: flex;
+      padding: 5px;
     }
 
     .item-details-body {
@@ -87,6 +92,7 @@
       padding: 10px;
       font-size: 1.25em;
       cursor: pointer;
+      text-decoration: none;
     }
   }
 }

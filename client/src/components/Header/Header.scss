@@ -3,9 +3,10 @@
 .Header-container {
   background-color: $secondary;
   height: 60px;
-  padding: 20px;
+  padding: 20px 0;
   color: white;
   display: flex;
+  width: 100%;
 
   .logo-container,
   .searcher-wrapper {
@@ -27,6 +28,7 @@
       height: 100%;
       max-width: 100%;
       max-height: 40px;
+      margin-left: 20px;
     }
   }
 }

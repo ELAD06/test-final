@@ -13,11 +13,12 @@ const fillItemObject = (itemData, descData) => {
         decimals: 0
       }
     },
-    picture: itemData.thumbnail,
+    picture: itemData.pictures[0].secure_url || itemData.thumbnail,
     condition: itemData.condition,
     free_shipping: itemData.shipping.free_shipping,
     sold_quantity: itemData.sold_quantity,
-    description: descData ? descData.plain_text : 'Sin decripcion del producto'
+    description: descData ? descData.plain_text : 'Sin decripcion del producto',
+    permalink: itemData.permalink
   }
 }
 
