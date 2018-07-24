@@ -1,7 +1,17 @@
+// COLORS
 $primary: #1498d7;
 $primaryOp: rgba(5, 232, 255, 0.8);
 $secondary: #222;
 $secondaryOp: rgba(158, 15, 184, 0.70);
+$shaddowColor: rgba(0, 0, 0, .7);
+$shaddow: 0 4px 8px 0 $shaddowColor;
 
+// VALUES
 $gradientBackground: linear-gradient(135deg, $secondaryOp -10%, $primaryOp 180%);
 $cristalsBgImage: ('https://static.vecteezy.com/system/resources/previews/000/101/253/non_2x/vector-free-abstract-background-1.jpg');
+
+// BREAKPOINTS
+$xs: 576px;
+$ms: 768px;
+$lg: 992px;
+$xlg: 1200px;

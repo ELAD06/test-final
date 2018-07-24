@@ -1,0 +1,5 @@
+@import 'variables';
+
+@mixin shaddow($top, $right, $bottom, $left, $color: $shaddowColor) {
+  box-shadow: $top $right $bottom $left $color
+}

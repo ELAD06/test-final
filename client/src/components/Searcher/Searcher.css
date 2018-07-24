@@ -6,7 +6,7 @@
     height: 25px;
     padding: 5px;
     border: none;
-    font-size: 1.25em; }
+    font-size: 1em; }
     .searcher-container .searcher:focus {
       outline: none; }
   .searcher-container .search-icon {

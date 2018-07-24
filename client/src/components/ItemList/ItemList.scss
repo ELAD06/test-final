@@ -1,6 +1,66 @@
-.item-conteiner {
+@import 'styles/variables';
+@import 'styles/mixins';
+
+
+.item-container {
     display: flex;
     width: 100%;
-    min-height: 10vh;
-    margin-bottom: 20px;
+    min-height: 40vh;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    @include shaddow( 0, 4px, 8px, 0);
+    transition: .3s;
+    margin: 10px;
+    padding: 10px 10px 30px 10px;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        @include shaddow( 0, 8px, 16px, 0);
+    }
+
+    .item-left, .item-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p {
+        display: flex;
+    }
+
+    .item-left {
+        .item-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 250px;
+            color: $primary;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    .item-right {
+        .item-price {
+            flex-direction: column;
+            span {
+                margin-top: 10px;
+                font-weight: bold;
+                font-size: 1.25em;
+                color: $primary;
+            }
+        }
+    }
+}
+
+@media (min-width: $ms) {
+    .item-container {
+        width: 42vw;
+    }
 }

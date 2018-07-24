@@ -4,10 +4,12 @@ import './List.css';
 
 export default class List extends  Component {
   render() {
+    const { isLoading } = this.props;
+    const classes = isLoading ? 'list-container loading' : 'list-container';
     return (
-      <ul className="list-container">
+      <ul className={classes}>
         
-        { this.props.isLoading ? 
+        { isLoading ? 
           (
             <div className="loading-wrapper">
             {/* TODO: // CREAR COMPONENTE DE CARGANDO... {SNIPPER} */}
@@ -16,8 +18,8 @@ export default class List extends  Component {
           ) :
           (
             this.props.results.map (
-              (item, index) => 
-                <ItemList key={index} title={item.title} />
+              (item) => 
+                <ItemList key={item.id} {...item}/>
             )
           )
         }

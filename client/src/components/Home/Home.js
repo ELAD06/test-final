@@ -18,7 +18,7 @@ export default class Home extends Component {
   };
 
   componentDidMount() {
-    let searchParam = 'boxers cachorros';
+    let searchParam = 'penny';
     if(this.props.match.path === '/items' && this.props.location.search.includes('?search=')) {
       const query = qs.parse(this.props.location.search);
       searchParam = query.search;
